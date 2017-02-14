@@ -10,6 +10,7 @@
 <style>
     body{
         margin: 0px;
+        overflow-x: hidden;
     }
 
     .container{
@@ -40,6 +41,8 @@
 
     .c1.open {
         transform: translate(0,0);
+
+        transition: transform 0.4s ease-out;
     }
 
     .c2 {
@@ -59,22 +62,32 @@
 <body>
 
 <div class="container">
-    <div class="c1" role="leftsidebar" id="left"></div>
+    <div class="c1" role="leftsidebar" id="left">
+        <input type="button" value="close" onclick="window.close()" id="leftMenuButton2">
+    </div>
     <div class="c2" role="main">
-        <input type="button" value="menu" onclick="window.open()" id="leftMenuButton">
+        <input type="button" value="open" onclick="window.open()" id="leftMenuButton">
     </div>
     <div class="c3" role="rightsidebar" id ="right"></div>
 </div>
 
 <script>
-function open() {
-  console.log('open clicked')
+function open(evt) {
+    // On links: evt.preventDefault();
+    var left = document.getElementById('left');
+    //Drawer
+    left.classList.add('open');
 }
 
-var left = document.getElementById('left');
-//var leftMenuButton = document.getElementById('leftMenuButton');
-console.log(left);
+function close(evt) {
+    // On links: evt.preventDefault();
+    var left = document.getElementById('left');
+    //Drawer
+    left.classList.remove('open');
+}
 
+
+//var leftMenuButton = document.getElementById('leftMenuButton');
 //leftMenuButton.addEventListener("click", open)
 
 </script>
