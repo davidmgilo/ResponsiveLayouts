@@ -32,17 +32,19 @@
 
     .c3 {
         left: 100%;
+        z-index: 1;
     }
 
     .c1 {
         background-color: lightskyblue;
         transform: translate(-250px,0);
+
+        transition: transform 0.4s ease-out;
+        z-index: 1;
     }
 
     .c1.open {
         transform: translate(0,0);
-
-        transition: transform 0.4s ease-out;
     }
 
     .c2 {
