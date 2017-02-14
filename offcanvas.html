@@ -65,15 +65,25 @@
 
 <div class="container">
     <div class="c1" role="leftsidebar" id="left">
-        <input type="button" value="close" onclick="window.close()" id="leftMenuButton2">
+        <input type="button" value="close" onclick="window.toogleleft()" id="leftMenuButton2">
     </div>
     <div class="c2" role="main">
-        <input type="button" value="open" onclick="window.open()" id="leftMenuButton">
+        <input type="button" value="open" onclick="window.toogleleft()" id="leftMenuButton">
     </div>
     <div class="c3" role="rightsidebar" id ="right"></div>
 </div>
 
 <script>
+
+var leftsb = true;
+
+function toogleleft(evt) {
+    var left = document.getElementById('left');
+    if(leftsb) left.classList.add('open');
+    else left.classList.remove('open');
+    leftsb = !leftsb;
+}
+
 function open(evt) {
     // On links: evt.preventDefault();
     var left = document.getElementById('left');
