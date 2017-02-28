@@ -1,0 +1,23 @@
+{
+  "name": "responsive-layouts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bulma": "^0.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmgilo/ResponsiveLayouts.git"
+  },
+  "author": "David <davidmgilo@gmail.com> (https://github.com/davidmgilo)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidmgilo/ResponsiveLayouts/issues"
+  },
+  "homepage": "https://github.com/davidmgilo/ResponsiveLayouts#readme"
+}
